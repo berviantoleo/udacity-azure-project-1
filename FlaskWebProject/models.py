@@ -8,7 +8,8 @@ from werkzeug.utils import secure_filename
 from flask import flash
 
 blob_container = app.config['BLOB_CONTAINER']
-blob_service = BlobServiceClient(account_url=app.config['BLOB_CONNECTION_STRING'])
+blob_service = BlobServiceClient.from_connection_string(app.config['BLOB_CONNECTION_STRING'])
+container_client = blob_service.get_container_client(blob_container)
 
 def id_generator(size=32, chars=string.ascii_uppercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
@@ -57,11 +58,12 @@ class Post(db.Model):
             Randomfilename = id_generator();
             filename = Randomfilename + '.' + fileextension;
             try:
-                blob_service.create_blob_from_stream(blob_container, filename, file)
+                container_client.upload_blob(filename, file)
                 if(self.image_path):
-                    blob_service.delete_blob(blob_container, self.image_path)
-            except Exception:
-                flash(Exception)
+                    container_client.delete_blob(self.image_path)
+            except Exception as err:
+                app.logger.error(err)
+                flash(err)
             self.image_path =  filename
         if new:
             db.session.add(self)
