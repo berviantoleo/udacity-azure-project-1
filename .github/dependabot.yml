@@ -6,8 +6,8 @@ updates:
     schedule:
       interval: "weekly"
 
-  # Maintain dependencies for npm
-  - package-ecosystem: "python"
+  # Maintain dependencies for pip
+  - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "weekly"
