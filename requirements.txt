@@ -1,14 +1,14 @@
 alembic==1.7.7
 azure-common==1.1.28
 azure-nspkg==3.0.2
-azure-storage-blob==12.10.0
+azure-storage-blob==12.11.0
 certifi==2021.10.8
 cffi==1.15.0
 chardet==4.0.0
 Click==8.0.4
 cryptography==36.0.2
 Flask==2.0.3
-Flask-Login==0.5.0
+Flask-Login==0.6.0
 Flask-Session==0.4.0
 Flask-SQLAlchemy==2.5.1
 Flask-WTF==1.0.0
@@ -25,7 +25,7 @@ python-dateutil==2.8.2
 python-editor==1.0.4
 requests==2.27.1
 six==1.16.0
-SQLAlchemy==1.4.32
+SQLAlchemy==1.4.34
 urllib3==1.26.9
-Werkzeug==2.0.3
+Werkzeug==2.1.1
 WTForms==3.0.1
