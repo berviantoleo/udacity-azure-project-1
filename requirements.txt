@@ -17,7 +17,7 @@ itsdangerous==2.1.2
 Jinja2==3.1.2
 Mako==1.2.0
 MarkupSafe==2.1.1
-msal==1.17.0
+msal==1.18.0
 pycparser==2.21
 pyodbc==4.0.32
 pyopenssl==22.0.0
