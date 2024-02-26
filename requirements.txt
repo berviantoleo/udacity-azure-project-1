@@ -6,7 +6,7 @@ certifi==2024.2.2
 cffi==1.16.0
 chardet==5.2.0
 Click==8.1.7
-cryptography==42.0.4
+cryptography==42.0.5
 Flask==3.0.2
 Flask-Login==0.6.3
 Flask-Session==0.6.0
