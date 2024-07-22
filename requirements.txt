@@ -20,7 +20,7 @@ MarkupSafe==2.1.5
 msal==1.29.0
 pycparser==2.22
 pyodbc==5.1.0
-pyopenssl==24.1.0
+pyopenssl==24.2.1
 python-dateutil==2.9.0.post0
 python-editor==1.0.4
 requests==2.32.3
